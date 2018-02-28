@@ -6,9 +6,8 @@ def badge_maker(name)
 end
 
 def batch_badge_creator(names)
-  names.each do |name|
-    # name = badge_maker(name)
-    names[names.index(name)] = badge_maker(name)
+  names.each_withIindex do |name, index|
+    names[index] = badge_maker(name)
   end
   names
 end
